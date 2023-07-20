@@ -72,7 +72,7 @@ int main(){
     // pi = {3,4};
     // cout << pi.first << " " << pi.second << "\n";
     // tie(a, b) = pi;
-    // cout << a << b;
+    cout << a << b;
 
 
 
