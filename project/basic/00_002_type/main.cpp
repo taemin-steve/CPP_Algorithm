@@ -15,7 +15,7 @@ vector<string> split(string input, string delimeter){
 }
 
 int main(){
-    //string type --------------------------------------------------------
+    //string type ------------------------------------------------
     // string a = "love is";
     // a += " pain!";
     // a.pop_back();
