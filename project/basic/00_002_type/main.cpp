@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <tuple>
 
 using namespace std;
 vector<string> split(string input, string delimeter){
@@ -46,9 +47,9 @@ int main(){
 
     // Reverse---------------------------------------------------------------
     // String에는 없어서 STL 사용해야함. 원본 문자열을 바꿔버린다. 
-    // string r = "abcdefghi";
-    // reverse(r.begin() + 3, r.end());
-    // cout << r << "\n";
+    string r = "abcdefghi";
+    reverse(r.begin() + 3, r.end());
+    cout << r << "\n";
 
     // define split--------------------------------------------------------
     // string s = " abv des gew dw";
@@ -58,24 +59,36 @@ int main(){
     //string to int---------------------------------------------------------
     // vector<string> v = {"15", "wef"};
     // for(string a : v) cout << a.c_str()<< "\n"; // c_str()을 해주는 이유는 각 원소의 뒤에 "\n"을 붙여주기 위함인듯.
-    // for(string a : v) cout << atoi(a.c_str())<< "\n";
+    // for(string a : v) cout << atoi(a.c_str())<< "\n"; // 내용이 변경되면 안 되는 제약 조건을 가진, char형 포인터를 리턴합니다
 
-    //bool true = 1// false = 0 // 0이 아닌 모든값은 참(1)로 인식됨. 
-    // int a = 10;
-    // cout << (bool)a << "\n";
-    // a = 0;
-    // cout << (bool)a << "\n";
+    // CPP 에서는 0이면 false // 나머지는 모두 참. 
+    int  a= -1;
+    cout << bool(a) << "\n"; // bool() >> True, False로 바꾸어 주는데, 0아니면 모두 참이니깐 참인 1로 변경 해줌
+    a = 0;
+    cout << bool(a) << "\n"; //  a가 0이면 
+    a = 1;
+    cout << bool(a) << "\n";
+    cout << true << "\n"; // true == 1
 
-    // pair<int, int> pi;
-    // tuple<int, int, int> tu; //이거 안되는디..
-    // int a,b,c ;
-    // pi = {3,4};
-    // cout << pi.first << " " << pi.second << "\n";
-    // tie(a, b) = pi;
-    cout << a << b;
+    pair<int, int> pi;
+    tuple<int, int, int> t1; // tuple 을 써주고 싶으면 위에서 include 해야한다. 
+    int k, b, c;
+    pi = {4,5};
+    t1 = make_tuple(1,2,3);
+    tie(k,b,c) = t1; // tie를 쓰지 않는 경우.. 상당히 복잡해 지니.. 그냥 tie 씁시다.
+    cout << k << b << c << endl;
+    tie(k,b) = pi;
+    cout << k << b << endl;
+    
 
-
-
+    // auto >> 스스로 추론해서 타입을 정하는 방식. 주로 길고 어려운 변수 타입을 쓸때 활용하기도 한다. 
+    vector<pair<int,int>> v;
+    for(int i = 1; i <= 5; i++){
+        v.push_back({i,i});
+    }
+    for(auto it : v){
+        cout << it.first << ":" << it.second << endl;
+    }
 
     return 0;
 }
