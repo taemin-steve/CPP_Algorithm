@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -31,4 +32,22 @@ int main(){
     /// 동적 할당 : 런타임 단계에서 메모리 할당.
     // Stack : 지역변수, 매개변수, 함수등에 의해 늘어나거나 줄어드는 메모리 영역. 함수 내의 변수 집합이 해당 함수의 다른 인스턴스 변수를 방해하지 않음
     // Heap : 동적으로 할당되는 변수를 담음. malloc, free 함수로 관리됨. vector가 대표적인 예시
+
+    vector<int> v;
+    for(int i = 1; i<=5; i++ )v.push_back(i);
+    for(int i = 0; i<5; i++){
+        cout << i << "th value : " << *(v.begin() + i) << endl;
+        cout << i << "th location : " << &*(v.begin() + i) << endl << endl; // 주소값을 바로 반환하지 못하여 다음과 같이 &*사용해야함
+    }
+    for( vector<int>::iterator it = v.begin(); it != v.end(); it ++){
+        cout << *it << endl;
+    }
+    auto it = v.begin();
+    advance(it,1);
+    advance(it,1);
+    cout << endl;
+    cout << *it <<endl;
+
+    //cout << v.begin() //이렇게 하면 접근 안됨 
+
 }
