@@ -3,3 +3,4 @@ cmake_minimum_required(VERSION 3.0.0)
 # Sub-Projects
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/00_001_inputOutput")
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/00_002_type")
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/00_003_Memory_Pointer")
