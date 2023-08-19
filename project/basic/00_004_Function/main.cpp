@@ -80,5 +80,7 @@ int main(){
     sort(v_sort_pair.begin(), v_sort_pair.end(), cmp); // cmp적용 
     for(pair<int,int> v : v_sort_pair){ cout << v.first << "," << v.second << endl;}
 
+    cout << "다음" << endl;
+
 
 }
