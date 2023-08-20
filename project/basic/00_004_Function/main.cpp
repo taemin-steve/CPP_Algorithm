@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <numeric>
+
 using namespace std;
 
 bool cmp(pair<int,int> a, pair<int,int> b){
@@ -79,8 +81,59 @@ int main(){
 
     sort(v_sort_pair.begin(), v_sort_pair.end(), cmp); // cmp적용 
     for(pair<int,int> v : v_sort_pair){ cout << v.first << "," << v.second << endl;}
+    cout << endl;
+    
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    cout << "Unique" << endl;
+    vector<int> v_unique;
 
-    cout << "다음" << endl;
+    // 연속된 원소를 제거하는 것에 가까움! 따라서 sort()랑 같이 사용해 주어야 한다.
+    v_unique = {4,3,5,1,2,3};
+    auto it = unique(v_unique.begin(), v_unique.end());
+    for(int v : v_unique){
+        cout << v ;
+    }
+    cout << endl;
 
+    sort(v_unique.begin(), v_unique.end());
+    it = unique(v_unique.begin(), v_unique.end());
+    for(int v : v_unique)cout << v ;
+    cout << endl;
 
+    //Erase 함수까지 사용하면 깔끔하게 중복되지 않은 요소만 돌려받을 수 있음!
+    v_unique.erase(unique(v_unique.begin(), v_unique.end()), v_unique.end());
+    for(int v : v_unique)cout << v ;
+    cout << endl;
+
+    cout << "upper_bound(), lower_bound()" << endl;
+
+    vector<int> v_bound = {1,3,5,7,9,11};
+    cout << lower_bound(v_bound.begin(), v_bound.end(), 5) - v_bound.begin() << endl; // 5이상인 지점 반환
+    cout << lower_bound(v_bound.begin(), v_bound.end(), 6) - v_bound.begin() << endl; // 6이상인 지점 반환
+    cout << upper_bound(v_bound.begin(), v_bound.end(), 5) - v_bound.begin() << endl; // 5초과인 지점 반환
+
+    cout << *lower_bound(v_bound.begin(), v_bound.end(), 5)<< endl; // 주소값이 리턴되기 때문에 역참조연산을 통해서 값확인가능
+    
+    v_bound = {1,3,3,3,9,11};
+    //이를 활용하여 동일 원소의 개수를 구할 수도 있음!
+    cout << upper_bound(v_bound.begin(), v_bound.end(), 3) - lower_bound(v_bound.begin(), v_bound.end(), 3)<< endl; // 주소값이 리턴되기 때문에 역참조연산을 통해서 값확인가능
+
+    //해당 조건을 만족시키는 경우가 없는경우 근방 지점 리턴
+    cout << upper_bound(v_bound.begin(), v_bound.end(), 13) - v_bound.begin() << endl; // 13초과인 부분이 없으므로, 그중에 조건에 가장 가까운 지점 리턴
+    cout << endl;
+
+    /////////////////////////////////////////////////////////////////////////////
+    cout << "accumulate()" << endl;
+    vector<int> v_acc = {1,2,3,4,5,6,7,8,9};
+    int sum = accumulate(v_acc.begin(), v_acc.end(),0); //numeric lib을 import 해주어야 한다. 
+    cout << sum << endl << endl;
+
+    /////////////////////////////////////////////////////////////////////////////////
+    cout << "max_element(), min_element" << endl;
+    vector<int> v_mm = {1,2,3,4,5,6,7,8,9};
+    cout << *max_element(v_mm.begin(), v_mm.end()) << endl; // 이터레이터가 반환되므로 역참조 연산으로 값 확인가능
+    cout << max_element(v_mm.begin(), v_mm.end()) - v_mm.begin() << endl; // index 값 확인도 가능!
+
+    cout << *min_element(v_mm.begin(), v_mm.end()) << endl; 
+    cout << min_element(v_mm.begin(), v_mm.end()) - v_mm.begin() << endl;
 }
