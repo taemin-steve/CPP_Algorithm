@@ -87,14 +87,23 @@ int main(){
     cout << "Unique" << endl;
     vector<int> v_unique;
 
-    // 연속된 원소를 제거하는 것에 가까움! 따라서 sort()랑 같이 사용해 주어야 한다.
-    v_unique = {4,3,5,1,2,3};
+    v_unique = {1,1,2,2,3,4,5};
     auto it = unique(v_unique.begin(), v_unique.end());
+    for(int v : v_unique)cout << v ;
+    cout << endl;
+
+    v_unique = {3,3,5,3,2,3};
+    it = unique(v_unique.begin(), v_unique.end());
     for(int v : v_unique){
         cout << v ;
     }
     cout << endl;
 
+    it = unique(v_unique.begin(), v_unique.end());
+    for(int v : v_unique)cout << v ;
+    cout << endl;
+    
+    // 연속된 원소를 제거하는 것에 가까움! 따라서 sort()랑 같이 사용해 주어야 한다.
     sort(v_unique.begin(), v_unique.end());
     it = unique(v_unique.begin(), v_unique.end());
     for(int v : v_unique)cout << v ;
@@ -105,6 +114,7 @@ int main(){
     for(int v : v_unique)cout << v ;
     cout << endl;
 
+    ///////////////////////////////////////////////////////////////////////////////
     cout << "upper_bound(), lower_bound()" << endl;
 
     vector<int> v_bound = {1,3,5,7,9,11};
