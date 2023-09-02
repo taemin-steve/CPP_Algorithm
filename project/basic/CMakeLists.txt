@@ -12,3 +12,6 @@ add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/00_008_Change_container_value")
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/00_009_Recure")
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/00_010_Permutation")
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/00_011_Combination")
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/00_012_Math")
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/00_013_Logic")
+
