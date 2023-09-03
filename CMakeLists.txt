@@ -3,6 +3,8 @@ project(Top)
 
 add_subdirectory("${CMAKE_SOURCE_DIR}/project/Week_00")
 add_subdirectory("${CMAKE_SOURCE_DIR}/project/basic")
+add_subdirectory("${CMAKE_SOURCE_DIR}/project/Week_01")
+
 
 # project(main VERSION 0.1.0 LANGUAGES C CXX)
 

@@ -11,6 +11,7 @@
         "xutility": "cpp",
         "xtree": "cpp",
         "queue": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "numeric": "cpp"
     }
 }
