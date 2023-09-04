@@ -13,5 +13,6 @@
         "queue": "cpp",
         "list": "cpp",
         "numeric": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
