@@ -12,7 +12,9 @@
         "xtree": "cpp",
         "queue": "cpp",
         "list": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "istream": "cpp",
+        "string": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
