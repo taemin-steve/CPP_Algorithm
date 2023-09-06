@@ -26,3 +26,16 @@ int main(){
     cout << ans;
 }
 //https://www.acmicpc.net/problem/10988
+// 이런경우 그냥 거꾸로 reverse 해서 확인하면 끝난다!
+// #include<bits/stdc++.h>
+// using namespace std;   
+// string s, temp; 
+// int main(){
+//     cin >> s; 
+//     temp = s; 
+//     reverse(temp.begin(), temp.end()); 
+//     if(temp == s) cout << 1 << "\n"; 
+//     else cout << 0 << "\n"; 
+      
+//     return 0; 
+// }
