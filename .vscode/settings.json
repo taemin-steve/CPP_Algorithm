@@ -14,7 +14,9 @@
         "list": "cpp",
         "numeric": "cpp",
         "istream": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "map": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
