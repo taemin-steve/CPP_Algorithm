@@ -1,6 +1,6 @@
 # CPP_Algorithm
 <div align="center">
-  <img src="https://github.com/taemin-steve/CPP_Algorithm/assets/75752289/8e6c385b-3fd1-49c2-980c-b5c8bea9c180" alt="Image 1" width="33%" height="33%">
+  <img src="https://github.com/taemin-steve/CPP_Algorithm/assets/75752289/8e6c385b-3fd1-49c2-980c-b5c8bea9c180" alt="Image 1" width="100%" height="33%">
 </div>
 CPP로 코딩 테스트를 준비하는 Repository 입니다! <br>
 
