@@ -21,7 +21,7 @@ int main(){
             mp[type] += 1;
         }
         for(auto item : mp){
-            ans *= (item.second +1);
+            ans *= (item.second +1); // long long ans; 로 선언해주는 것이 더 좋음. 경우의수의 경우 숫자가 상당히 커질수 있음
         }
         cout << ans -1 << "\n"; // 여러개 있는 경우에 공백문자 반드시 포함해 주어야 한다 
     }
