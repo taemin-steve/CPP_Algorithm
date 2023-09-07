@@ -20,12 +20,18 @@ int main(){
         m[p_array[i]] = i;
     }
 
-    for(int j = 0; j < M; j++){
+    // for(int j = 0; j < M; j++){
+    //     cin >> s;
+    //     if(m.find(s) == m.end()){ //map에 없으면 
+    //         cout << p_array[atoi(s.c_str())] << "\n";
+    //         continue;
+    //     }
+    //     else cout << m[s]<< "\n";
+    // }
+
+    for(int j = 0; j < M; j ++){
         cin >> s;
-        if(m.find(s) == m.end()){ //map에 없으면 
-            cout << p_array[atoi(s.c_str())] << "\n";
-            continue;
-        }
-        else cout << m[s]<< "\n";
+        if(atoi(s.c_str()) == 0) cout << m[s] << "\n"; // 문자인경우
+        else cout << p_array[atoi(s.c_str())] << "\n";
     }
 }
