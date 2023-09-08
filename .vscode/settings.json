@@ -17,7 +17,8 @@
         "string": "cpp",
         "unordered_map": "cpp",
         "map": "cpp",
-        "xiosbase": "cpp"
+        "xiosbase": "cpp",
+        "stack": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
