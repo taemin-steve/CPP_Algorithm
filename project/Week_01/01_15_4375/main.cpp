@@ -15,7 +15,7 @@ int main(){
 			} 
 			else{
 				number_one = number_one * 10 + 1;
-				number_one %= n;
+				number_one %= n; // 중간중간 지속적으로 % 연산해줘도, 결국 마지막에 한번하는 것과 같음!
 				cnt ++; 
 			}
 		}
