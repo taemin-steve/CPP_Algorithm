@@ -1,6 +1,8 @@
 #include <iostream>
 #include <queue>
 #include <tuple>
+#pragma warning(disable:4996)
+
 using namespace std;
 int N, M;
 int adj[104][104]; // 한번에 여유있게 잡아주고
