@@ -27,7 +27,7 @@ int main(){
         }
     }
     int max_element = 0;
-    for(int h=0 ; h<101; h++){ // 최솟값 예외 처리 못했음...
+    for(int h=0 ; h<101; h++){ // 최솟값 예외 처리 못했음....
         int ret = 0;
         fill(&visited[0][0], &visited[0][0] + max_num * max_num, 0);
         for(int i=0; i<N; i++){
