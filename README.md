@@ -12,4 +12,4 @@ CPP 자체에 익숙하지 못해 [큰돌님의 강의](https://www.inflearn.com
 
 <br />
 
-더 자세한 내용은 <a href="https://velog.io/@taemin-steve/series" target="_blank"><img src="https://img.shields.io/badge/Velog-white?style=flat&logo=velog&logoColor=#20C997"/></a> 에 정리되어 있습니다!
+더 자세한 내용은 <a href="https://velog.io/@taemin-steve/series" target="_blank"><img src="https://img.shields.io/badge/Velog-white?style=flat&logo=velog&logoColor=#20C997"/></a> 에 정리되어 있습니다!!!
