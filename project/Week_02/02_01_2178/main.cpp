@@ -29,7 +29,7 @@ int main(){
         for(int i=0; i<4; i++){
             int ny = y + dy[i];
             int nx = x + dx[i];
-            if( ny<0 || ny>=N || nx<0 || nx>=M || adj[ny][nx] == 0) continue;
+            if( ny<0 || ny>=N || nx<0 || nx>=M || adj[ny][nx] == 0) continue; // 순서를 만드시 지켜주어야 한다. overflow 먼저 체크!
             if(visited[ny][nx]) continue;
             visited[ny][nx] = visited[y][x] + 1;
             q.push({ny,nx});
